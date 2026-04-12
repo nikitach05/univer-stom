@@ -1,0 +1,65 @@
+<header class="header">
+	<div class="header__top">
+		<div class="header__top-container container">
+			<div class="header__time-work">9:00–22:00</div>
+			<div class="header__address">Москва, ул. Улица, 11</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="header__content">
+			<a href="/" class="header__logo logo">
+				<img src="/src/assets/img/svg/logo.svg" alt="Logo">
+			</a>
+
+			<ul class="header__menu menu">
+				{% for li in menu %}
+				{% if li.submenu.length > 0 %}
+				<li class="menu__item menu__item--has-submenu">
+					<span class="menu__link">{{li.item}}</span>
+					<svg class="menu__arrow">
+						<use href="/src/assets/img/svg-sprite/sprite.svg#arrow"></use>
+					</svg>
+					<ul class="menu__submenu">
+						{% for subli in li.submenu %}
+						<li class="menu__submenu-item">
+							<a class="menu__submenu-link" href="#">{{subli}}</a>
+						</li>
+						{% endfor %}
+					</ul>
+				</li>
+				{% else %}
+				<li class="menu__item">
+					<a class="menu__link" href="#">{{li.item}}</a>
+				</li>
+				{% endif %}
+				{% endfor %}
+			</ul>
+
+			<div class="header__menu-toggle menu-toggle">
+				<svg>
+					<use href="/src/assets/img/svg-sprite/sprite.svg#gmb"></use>
+				</svg>
+			</div>
+
+		</div>
+	</div>
+	
+	<div class="header__mobile-menu mobile-menu">
+	
+		<div class="mobile-menu__close">
+			<svg>
+				<use href="/src/assets/img/svg-sprite/sprite.svg#close"></use>
+			</svg>
+		</div>
+	
+		<ul class="mobile-menu__list">
+			{% for li in menu %}
+			<li class="mobile-menu__list-item">
+				<a class="mobile-menu__list-link" href="#">{{li.item}}</a>
+			</li>
+			{% endfor %}
+		</ul>
+	
+	</div>
+	
+</header>
