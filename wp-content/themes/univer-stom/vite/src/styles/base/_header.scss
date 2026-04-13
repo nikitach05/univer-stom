@@ -38,7 +38,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            gap: r(12);
+            gap: slamp(r(40), r(150));
             height: r(40);
             font-size: r(14);
             letter-spacing: -0.04em;
@@ -77,6 +77,10 @@
         &:hover {
             opacity: .85;
         }
+    }
+
+    &__address {
+        margin-left: auto;
     }
 
     &__content {

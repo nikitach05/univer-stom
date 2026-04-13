@@ -28,13 +28,13 @@
         }
     }
 
-    &--trans {
-        border: .12rem solid var(--primary);
+    &--gray {
+        color: var(--accent);
+        background: var(--gray);
 
         &:hover {
             color: var(--white);
-            border-color: var(--accent);
-            background: var(--accent);
+            background: var(--primary);
         }
     }
 
