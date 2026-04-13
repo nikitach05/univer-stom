@@ -3,4 +3,31 @@
 
 {% block content %}
 
+<main class="main">
+    <div class="main__container container">
+        <div class="main__left">
+            <div class="main__head">
+                <h1 class="main__title title">Университетский стоматологический центр</h1>
+                <div class="main__description">25+ лет опыта и совершенствования в стоматологии. Центр сочетает передовые технологии, авторские методики и междисциплинарный подход.</div>
+            </div>
+
+            <div class="main__contacts">
+                <div class="main__time-work">Ежедневно 9:00-22:00</div>
+                <a href="tel:+7 (999) 999-99-99" class="main__phone">+7 (999) 999-99-99</a>
+                <div class="main__address">Москва, ул. Улица, 11</div>
+                <button class="main__btn btn btn--primary">Записаться на приём</button>
+            </div>
+        </div>
+        <div class="main__right">
+            <img class="main__hero" src="/src/assets/img/hero.webp" loading="lazy" alt="Улыбка">
+        </div>
+    </div>
+</main>
+
+<section class="main-about mb-indent">
+    <div class="main-about__container container">
+        <h2 class="title">О центре</h2>
+    </div>
+</section>
+
 {% endblock %}

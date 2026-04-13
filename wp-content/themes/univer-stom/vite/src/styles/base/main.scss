@@ -12,6 +12,12 @@
     }
 }
 
+.title {
+    font-weight: 500;
+    font-size: slamp(r(32), r(48));
+    line-height: 120%;
+}
+
 .input,
 .textarea {
     display: block;

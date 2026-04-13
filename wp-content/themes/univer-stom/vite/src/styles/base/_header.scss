@@ -1,5 +1,9 @@
 .header {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 900;
 
     &::after {
         display: none;
@@ -28,7 +32,6 @@
     }
 
     &__top {
-        color: var(--white);
         background: var(--accent);
 
         &-container {
@@ -37,6 +40,42 @@
             justify-content: space-between;
             gap: r(12);
             height: r(40);
+            font-size: r(14);
+            letter-spacing: -0.04em;
+            color: var(--white);
+        }
+    }
+
+    &__phone, &__address {
+        display: flex;
+        align-items: center;
+        gap: r(8);
+        line-height: 100%;
+
+        svg {
+            @include sprite-size(r(14), r(14));
+    
+            use {
+                fill: var(--white);
+            }
+        }
+    }
+
+    &__phone {
+        text-decoration: none;
+        color: currentColor;
+        transition: .3s;
+
+        svg {
+            @include sprite-size(r(14), r(14));
+
+            use {
+                fill: var(--white);
+            }
+        }
+
+        &:hover {
+            opacity: .85;
         }
     }
 
@@ -44,6 +83,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin: r(12) 0 0;
     }
 
     &__right {
@@ -78,7 +118,7 @@
 
 .menu {
     display: flex;
-    gap: 0 slamp(r(16), r(24));
+    gap: 0 r(4);
 
     &__item {
         position: relative;
@@ -107,8 +147,20 @@
     }
 
     &__link {
+        display: flex;
+        padding: r(8) r(16);
+        font-size: r(14);
+        letter-spacing: -0.04em;
         color: var(--text);
+        border-radius: r(100);
         text-decoration: none;
+        background: var(--white);
+        transition: .3s;
+
+        &:hover {
+            color: var(--white);
+            background: var(--primary);
+        }
     }
 
     &__arrow {
