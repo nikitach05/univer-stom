@@ -7,7 +7,16 @@
         grid-template-columns: repeat(2, minmax(0, 1fr));
         gap: r(20);
         min-height: r(894);
-        padding: slamp(r(130), r(170)) 0;
+        padding: r(170) $container-gap;
+
+        @include media('<lg') {
+            grid-template-columns: minmax(0, 38%) minmax(0, 1fr);
+        }
+
+        @include media('<sm') {
+            grid-template-columns: minmax(0, 1fr);
+            padding: r(160) $container-gap;
+        }
     }
 
     &__left {
@@ -26,7 +35,9 @@
     }
 
     &__head {
-        padding-top: slamp(r(20), r(50));
+        @include media('>=sm') {
+            padding-top: slamp(r(20), r(50));
+        }
     }
 
     &__description {
@@ -41,6 +52,19 @@
 
     &__contacts {
         margin-top: auto;
+
+        @include media('<sm') {
+            display: none;
+        }
+
+        &-mobile {
+            display: none;
+            margin: r(32) 0 0;
+            
+            @include media('<sm') {
+                display: block;
+            }
+        }
     }
 
     &__time-work {
@@ -75,6 +99,19 @@
 
     &__btn {
         margin: r(40) 0 0;
+
+        &-mobile {
+            display: none;
+
+            @include media('<sm') {
+                display: flex;
+                margin: r(32) 0 0;
+            }
+
+            @include media('<xs') {
+                width: 100%;
+            }
+        }
     }
 
     &__hero {
@@ -85,7 +122,14 @@
         width: auto;
         height: auto;
         object-fit: contain;
+        object-position: center bottom;
         z-index: 5;
+
+        @include media('<sm') {
+            top: 0;
+            bottom: auto;
+            max-width: r(360);
+        }
     }
 
     &__services {
@@ -94,8 +138,20 @@
         bottom: 0;
         display: grid;
         grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: slamp(r(10), r(20));
+        gap: slamp(r(10), r(20), $sm, $xl);
         z-index: 10;
+
+        @include media('<md') {
+            right: 0;
+        }
+
+        @include media('<sm') {
+            position: relative;
+            bottom: auto;
+            width: 100%;
+            grid-template-columns: minmax(0, 1fr);
+            padding-top: r(320);
+        }
 
         &-item {
             display: flex;
@@ -113,19 +169,39 @@
             justify-content: center;
             align-items: center;
             margin-bottom: auto;
-            width: r(56);
-            height: r(56);
+            width: slamp(r(48), r(56));
+            height: slamp(r(48), r(56));
             border-radius: 50%;
             background: var(--gray);
         }
 
+        &-icon {
+            @include media('<sm') {
+                max-width: r(20);
+            }
+        }
+
         &-title {
-            max-width: r(150);
             margin: 0 auto;
             font-size: r(20);
             line-height: 110%;
             letter-spacing: -0.04em;
             text-align: center;
+
+            @include media('>=md') {
+                max-width: r(150);
+            }
+
+            @include media('>=sm') {
+                font-size: slamp(r(16), r(20));
+            }
+        }
+
+        &-btn {
+            @include media('<md', '>=sm') {
+                padding-left: r(16);
+                padding-right: r(16);
+            }
         }
     }
 }
@@ -138,13 +214,18 @@
     &::before {
         content: '';
         position: absolute;
+        top: r(1);
         left: 0;
         right: 0;
-        height: slamp(r(80), r(95));
+        height: r(95);
         border-radius: r(40) r(40) 0 0;
         background: var(--accent);
         transform: translateY(-100%);
         z-index: 20;
+    }
+
+    @include media('<sm') {
+        height: r(80);
     }
 
     &__container {
