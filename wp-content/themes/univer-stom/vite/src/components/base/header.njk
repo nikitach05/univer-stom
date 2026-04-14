@@ -43,8 +43,12 @@
 			</ul>
 
 			<div class="header__menu-toggle menu-toggle">
-				<svg>
+				<span>Меню</span>
+				<svg class="gmb">
 					<use href="/src/assets/img/svg-sprite/sprite.svg#gmb"></use>
+				</svg>
+				<svg class="close">
+					<use href="/src/assets/img/svg-sprite/sprite.svg#close"></use>
 				</svg>
 			</div>
 
@@ -53,12 +57,6 @@
 	
 	<div class="header__mobile-menu mobile-menu">
 	
-		<div class="mobile-menu__close">
-			<svg>
-				<use href="/src/assets/img/svg-sprite/sprite.svg#close"></use>
-			</svg>
-		</div>
-	
 		<ul class="mobile-menu__list">
 			{% for li in menu %}
 			<li class="mobile-menu__list-item">
@@ -66,6 +64,13 @@
 			</li>
 			{% endfor %}
 		</ul>
+
+		<div class="mobile-menu__contacts">
+			<div class="main__time-work">Ежедневно 9:00-22:00</div>
+			<a href="tel:+7 (999) 999-99-99" class="main__phone">+7 (999) 999-99-99</a>
+			<div class="main__address">Москва, ул. Улица, 11</div>
+			<button class="main__btn btn btn--primary">Записаться на приём</button>
+		</div>
 	
 	</div>
 	

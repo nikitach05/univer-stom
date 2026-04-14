@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 	function onClicktoggleMenu(e) {
 		toggleMenu();
+		btnMenu.classList.toggle("opened");
 
 		if (
 			document
