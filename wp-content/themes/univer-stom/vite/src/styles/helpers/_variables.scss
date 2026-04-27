@@ -1,12 +1,14 @@
 :root {
     // Colors
     --primary: #68a0d7;
+    --hover: #72B0ED;
     --accent: #616161;
     --text: #000;
     --light-text: rgba(0, 0, 0, 0.7);
     --white: white;
     --gray: #eee;
     --border: rgba(0, 0, 0, .2);
+    --black: #000;
     --error: #B4241A;
     
     // Index
@@ -23,8 +25,8 @@
 }
 
 // Indent
-$min-indent: r(30);
-$max-indent: r(60);
+$min-indent: r(80);
+$max-indent: r(120);
 
 // Container
 $container-gap: r(15);
