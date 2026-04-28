@@ -144,27 +144,10 @@
     &__item {
         position: relative;
         cursor: pointer;
-
-        &--has-submenu {
-            display: flex;
-            align-items: center;
-            gap: 0 .8rem;
-
-            &:hover {
-                .menu__submenu {
-                    opacity: 1;
-                    transform: scaleY(1);
-
-                    .menu__submenu-item {
-                        opacity: 1;
-                    }
-                }
-
-                .menu__arrow {
-                    transform: rotate(180deg);
-                }
-            }
-        }
+        border-radius: r(100);
+        backdrop-filter: blur(15px);
+        background: rgba(255, 255, 255, .75);
+        box-shadow: 1px 2px 10px rgba(0, 0, 0, .03);
     }
 
     &__link {
@@ -175,12 +158,11 @@
         color: var(--text);
         border-radius: r(100);
         text-decoration: none;
-        background: var(--white);
         transition: .3s;
 
         &:hover {
             color: var(--white);
-            background: var(--primary);
+            background: var(--hover);
         }
     }
 
@@ -255,6 +237,9 @@
     padding: r(12) r(24);
     border-radius: r(100);
     background: var(--white);
+    backdrop-filter: blur(15px);
+    background: rgba(255, 255, 255, .75);
+    box-shadow: 1px 2px 10px rgba(0, 0, 0, .03);
     cursor: pointer;
 
     span {
