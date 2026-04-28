@@ -627,3 +627,24 @@
         }
     }
 }
+
+.main-doctors {
+    &__head {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: slamp(r(10), r(20));
+    }
+
+    &__thumbs {
+        display: flex;
+        align-items: center;
+
+        &-img {
+            width: slamp(r(56), r(80));
+            height: slamp(r(56), r(80));
+            border: r(3) solid var(--gray);
+            border-radius: 50%;
+        }
+    }
+}
