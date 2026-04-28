@@ -11,8 +11,6 @@ body {
 
 body {
     overflow-x: hidden;
-    display: flex;
-    flex-direction: column;
     min-width: r(320);
     max-width: 100%;
     min-height: 100vh;
@@ -20,7 +18,7 @@ body {
     font-family: var(--regular), sans-serif;
     line-height: 140%;
     color: var(--text);
-    text-wrap: balance;
+    // text-wrap: balance;
 
     &.hidden {
         overflow: hidden;

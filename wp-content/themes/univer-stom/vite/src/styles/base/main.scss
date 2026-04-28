@@ -18,6 +18,14 @@
     line-height: 120%;
 }
 
+.text {
+    margin: slamp(r(24), r(32)) 0 0;
+    font-size: slamp(r(14), r(18));
+    line-height: 130%;
+    letter-spacing: -0.04em;
+    opacity: .7;
+}
+
 .input,
 .textarea {
     display: block;

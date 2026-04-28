@@ -3,10 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	const btnMenu = document.querySelector(".menu-toggle");
 	btnMenu.addEventListener("click", onClicktoggleMenu);
 
-	document
-		.querySelector(".mobile-menu__close")
-		.addEventListener("click", onClicktoggleMenu);
-
 	function onClicktoggleMenu(e) {
 		toggleMenu();
 		btnMenu.classList.toggle("opened");
